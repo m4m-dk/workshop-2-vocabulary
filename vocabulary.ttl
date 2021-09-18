@@ -1,0 +1,47 @@
+@prefix beer-onto: <http://purl.org/m4m/beer-ontology/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://purl.org/m4m/beer-ontology/> a skos:ConceptScheme;
+  dct:creator <https://www.linkedin.com/in/kristina-tomicic-6bb443108/>;
+  dct:description "Qualitative and quantitative variables describing beer"@en;
+  dct:rights <https://spdx.org/licenses/CC0-1.0>;
+  dct:title "Beer ontology"@en;
+  pav:createdOn "2021-08-23T18:13+02:00"@en;
+  pav:lastUpdatedOn "2021-08-24T09:33+02:00"@en;
+  pav:version "0.1.0"@en;
+  skos:hasTopConcept beer-onto:Deprecated, beer-onto:alc_percentage, beer-onto:beer_bitterness,
+    beer-onto:beer_color, beer-onto:beer_nutrition;
+  skos:prefLable "Beer ontology"@en .
+
+beer-onto:Deprecated a skos:Concept;
+  skos:definition "This is a set of controlled terms which are deprecated."@en;
+  skos:inScheme <http://purl.org/m4m/beer-ontology/>;
+  skos:prefLabel "Deprecated"@en;
+  skos:topConceptOf <http://purl.org/m4m/beer-ontology/> .
+
+beer-onto:alc_percentage a skos:Concept;
+  skos:definition "Percentage of alcohol in a unit of a beer"@en;
+  skos:inScheme <http://purl.org/m4m/beer-ontology/>;
+  skos:prefLabel "alc_percentage"@en;
+  skos:topConceptOf <http://purl.org/m4m/beer-ontology/> .
+
+beer-onto:beer_color a skos:Concept;
+  skos:definition "Color shade of a certain beer."@en;
+  skos:inScheme <http://purl.org/m4m/beer-ontology/>;
+  skos:prefLabel "beer_color"@en;
+  skos:topConceptOf <http://purl.org/m4m/beer-ontology/> .
+
+beer-onto:beer_nutrition a skos:Concept;
+  skos:definition "Calories in a unit of a beer."@en;
+  skos:inScheme <http://purl.org/m4m/beer-ontology/>;
+  skos:prefLabel "beer_nutrition"@en;
+  skos:topConceptOf <http://purl.org/m4m/beer-ontology/> .
+
+beer-onto:beer_bitterness a skos:Concept;
+  skos:definition "The scale of beer bitterness determining the taste of beer."@en;
+  skos:inScheme <http://purl.org/m4m/beer-ontology/>;
+  skos:prefLabel "beer_bitterness"@en;
+  skos:topConceptOf <http://purl.org/m4m/beer-ontology/> .
