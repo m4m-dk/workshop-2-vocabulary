@@ -1,24 +1,25 @@
-ConceptScheme URI,http://purl.org/m4m/beer-ontology/
-PREFIX,beer-onto,http://purl.org/m4m/beer-ontology/
-PREFIX,pav,http://purl.org/pav/
-PREFIX,dct,http://purl.org/dc/terms/
-PREFIX,owl,http://www.w3.org/2002/07/owl#
-PREFIX,xsd,http://www.w3.org/2001/XMLSchema#
-PREFIX,skos,http://www.w3.org/2004/02/skos/core#
-PREFIX,wikidata,https://www.wikidata.org/wiki/
-dct:title,Beer ontology
-skos:prefLable,Beer ontology
-dct:description,Qualitative and quantitative variables describing beer
-dct:creator,https://www.linkedin.com/in/kristina-tomicic-6bb443108/
-dct:rights,https://spdx.org/licenses/CC0-1.0
-pav:version,0.1.0
-pav:createdOn,2021-08-23T18:13+02:00
-pav:lastUpdatedOn,2021-08-24T09:33+02:00
+ConceptScheme URI,http://purl.org/m4m-dk-2/variables/,Main GUPRI (i.e. PID) under which all terms are defined. Preference is to use PURLs or W3IDs as they provide permanent resolvable identifiers.
+"Prefixes for controlled vocabularies, schema and ontologies"
+PREFIX,vars,http://purl.org/m4m-dk-2/variables/,Prefix for our controlled vocabulary since it is rather tedious to write long URLs all the time
+PREFIX,skos,http://www.w3.org/2004/02/skos/core#,Prefix for SKOS Onotlogy is which our base for defining SKOS based controlled vocabulary
+PREFIX,pav,http://purl.org/pav/ ,"Prefix for Provenance, Authoring and Versioning Onotlogy which properties such as version and createdOn we will use to describe our controlled vocabulary"
+PREFIX,dct,http://purl.org/dc/terms/ ,"Prefix for Dublin Core (Terms) Ontology which properties such as title, description, rights, source, etc. we will use to describe our controlled vocabulary as well to define its terms"
+PREFIX,qudt,http://qudt.org/schema/qudt/,"Prefix for ""Quantity, Unit, Dimension and Type"" schema that is used to model physical units."
+PREFIX,unit,http://qudt.org/vocab/unit/,"Prefix for QUDT Vocabulary of Units which terms we will use to semantically define units of measurements for terms (i.e., variables) we are defining "
+Metadata about vocabulary
 
+dct:title,M4M-DK-2 Variables,Title of the vocabulary
+dct:description,Quantitative and qualitative and quantitative variables describing ...,Description of the controlled vocabulary
+dct:creator,https://orcid.org/0000-0002-9381-9693,An ORCID ID of the vocabulary creator
+dct:rights,https://spdx.org/licenses/CC0-1.0,License under which the vocabulary is provided
+pav:version,0.1.0,Vocabulary version
+pav:createdOn,2021-08-23T18:13+02:00,Date when vocabulary was initially created
+pav:lastUpdatedOn,2021-08-24T09:33+02:00,Date of the last vocabulary update
+Definition of terms
 
-Identifier,skos:prefLabel@en,"skos:altLabel(separator="","")",skos:definition@en,"dct:source(separator="","")","skos:broader(separator="","")","skos:closeMatch(separator="","")","skos:exactMatch(separator="","")","skos:broadMatch(separator="","")","skos:narrowMatch(separator="","")","skos:relatedMatch(separator="","")",owl:deprecated^^xsd:boolean,dct:isReplacedBy,skos:editorialNote@en,"dct:creator(separator="","")","dct:contributor(separator="","")"
-beer-onto:Deprecated,Deprecated,,This is a set of controlled terms which are deprecated.,,,, 
-beer-onto:alc_percentage,alc_percentage,,Percentage of alcohol in a unit of a beer
-beer-onto:beer_color,beer_color,,Color shade of a certain beer.
-beer-onto:beer_nutrition,beer_nutrition,,Calories in a unit of a beer.
-beer-onto:beer_bitterness,beer_bitterness,,The scale of beer bitterness determining the taste of beer.
+Identifier,skos:prefLabel@en,qudt:unit,"skos:altLabel(separator="","")",skos:definition@en,"dct:source(separator="","")","skos:broader(separator="","")","skos:exactMatch(separator="","")","skos:closeMatch(separator="","")",skos:editorialNote@en,"dct:creator(separator="","")","dct:contributor(separator="","")"
+vars:AtmosphericTerms,Atmospheric Terms,,,This is a parent concept containing controlled terms representing to the atmospheric variables.
+vars:wind_speed,wind_speed,unit:M-PER-SEC,,,,vars:AtmosphericTerms,https://mmisw.org/ont/cf/parameter/wind_speed,,,https://orcid.org/0000-0002-9381-9693
+vars:
+vars:
+vars:
