@@ -1,4 +1,4 @@
-[![CI](https://github.com/m4m-dk/workshop-2-controlled-vocabulary/workflows/Sheet2RDF/badge.svg)](https://github.com/m4m-dk/workshop-2-controlled-vocabulary/actions?query=workflow%3ASheet2RDF)
+[![CI](https://github.com/m4m-dk/workshop-2-vocabulary/workflows/Sheet2RDF/badge.svg)](https://github.com/m4m-dk/workshop-2-vocabulary/actions?query=workflow%3ASheet2RDF)
 
 # [Artic Climate Variables](http://purl.org/m4m-dk-2/variables/)
 Controlled vocabularies allow an accurate and controlled approach in describing physical and digital assets (e.g., data). One of such controlled vocabulary is **Artic Climate Variables**. This controlled vocabulary is a result of the second Danish Metadata 4 Machine (M4M-DK-2) Workshop. 
