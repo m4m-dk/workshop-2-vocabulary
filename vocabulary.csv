@@ -20,6 +20,6 @@ Definition of terms
 Identifier,skos:prefLabel@en,qudt:unit,"skos:altLabel(separator="","")",skos:definition@en,"dct:source(separator="","")","skos:broader(separator="","")","skos:exactMatch(separator="","")","skos:closeMatch(separator="","")",skos:editorialNote@en,"dct:creator(separator="","")","dct:contributor(separator="","")"
 vars:AtmosphericTerms,Atmospheric Terms,,,This is a parent concept containing controlled terms representing to the atmospheric variables.
 vars:wind_speed,wind_speed,unit:M-PER-SEC,,,,vars:AtmosphericTerms,https://mmisw.org/ont/cf/parameter/wind_speed,,,https://orcid.org/0000-0002-9381-9693
-vars:
+vars:wind_direction,wind_direction,,,,,vars:AtmosphericTerms
 vars:
 vars:

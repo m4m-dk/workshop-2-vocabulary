@@ -21,7 +21,7 @@
 vars:AtmosphericTerms a skos:Concept;
   skos:definition "This is a parent concept containing controlled terms representing to the atmospheric variables."@en;
   skos:inScheme <http://purl.org/m4m-dk-2/variables/>;
-  skos:narrower vars:wind_speed;
+  skos:narrower vars:wind_direction, vars:wind_speed;
   skos:prefLabel "Atmospheric Terms"@en;
   skos:topConceptOf <http://purl.org/m4m-dk-2/variables/> .
 
@@ -32,3 +32,8 @@ vars:wind_speed a skos:Concept;
   skos:exactMatch <https://mmisw.org/ont/cf/parameter/wind_speed>;
   skos:inScheme <http://purl.org/m4m-dk-2/variables/>;
   skos:prefLabel "wind_speed"@en .
+
+vars:wind_direction a skos:Concept;
+  skos:broader vars:AtmosphericTerms;
+  skos:inScheme <http://purl.org/m4m-dk-2/variables/>;
+  skos:prefLabel "wind_direction"@en .
