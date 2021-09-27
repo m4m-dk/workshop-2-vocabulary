@@ -7,33 +7,91 @@
 @prefix vars: <http://purl.org/m4m-dk-2/variables/> .
 
 <http://purl.org/m4m-dk-2/variables/> a skos:Concept, skos:ConceptScheme;
-  dct:creator <https://orcid.org/0000-0002-9381-9693>;
+  dct:creator <https://orcid.org/0000-0002-0329-0192>, <https://orcid.org/0000-0002-9381-9693>,
+    <https://orcid.org/0000-0002-9823-589X>, <https://orcid.org/0000-0003-2971-3402>;
   dct:description "Quantitative and qualitative and quantitative variables describing ..."@en;
   dct:rights <https://spdx.org/licenses/CC0-1.0>;
-  dct:title "M4M-DK-2 Variables"@en;
+  dct:title "Wastewater-2 Variables"@en;
   pav:createdOn "2021-08-23T18:13+02:00"@en;
   pav:lastUpdatedOn "2021-08-24T09:33+02:00"@en;
-  pav:version "0.1.0"@en;
-  skos:hasTopConcept <http://purl.org/m4m-dk-2/variables/>, vars:AtmosphericTerms;
+  pav:version "0.1.1"@en;
+  skos:hasTopConcept <http://purl.org/m4m-dk-2/variables/>, vars:AtmosphericTerms, vars:GenericTerms,
+    vars:WaterTerms, vars:relative_humidity;
   skos:inScheme <http://purl.org/m4m-dk-2/variables/>;
   skos:topConceptOf <http://purl.org/m4m-dk-2/variables/> .
 
 vars:AtmosphericTerms a skos:Concept;
-  skos:definition "This is a parent concept containing controlled terms representing to the atmospheric variables."@en;
+  skos:definition "This is a parent concept containing controlled terms representing atmospheric variables."@en;
   skos:inScheme <http://purl.org/m4m-dk-2/variables/>;
-  skos:narrower vars:wind_direction, vars:wind_speed;
+  skos:narrower vars:atmospheric_pressure, vars:water_temperature, vars:wind_direction,
+    vars:wind_speed;
   skos:prefLabel "Atmospheric Terms"@en;
+  skos:topConceptOf <http://purl.org/m4m-dk-2/variables/> .
+
+vars:WaterTerms a skos:Concept;
+  skos:definition "This is a parent concept containing controlled terms representing water variables."@en;
+  skos:inScheme <http://purl.org/m4m-dk-2/variables/>;
+  skos:prefLabel "Water Terms"@en;
+  skos:topConceptOf <http://purl.org/m4m-dk-2/variables/> .
+
+vars:GenericTerms a skos:Concept;
+  skos:definition "This is an overarching concept containing variables that are not field specific."@en;
+  skos:inScheme <http://purl.org/m4m-dk-2/variables/>;
+  skos:narrower vars:Latitude, vars:Longitude, vars:Propiconazole;
+  skos:prefLabel "Generic Terms"@en;
   skos:topConceptOf <http://purl.org/m4m-dk-2/variables/> .
 
 vars:wind_speed a skos:Concept;
   dct:creator <https://orcid.org/0000-0002-9381-9693>;
   qudt:unit unit:M-PER-SEC;
   skos:broader vars:AtmosphericTerms;
+  skos:definition "Speed is the magnitude of velocity. Wind is defined as a two-dimensional (horizontal) air velocity vector, with no vertical component. (Vertical motion in the atmosphere has the standard name upward_air_velocity.) The wind speed is the magnitude of the wind velocity."@en;
   skos:exactMatch <https://mmisw.org/ont/cf/parameter/wind_speed>;
   skos:inScheme <http://purl.org/m4m-dk-2/variables/>;
   skos:prefLabel "wind_speed"@en .
 
 vars:wind_direction a skos:Concept;
+  qudt:unit unit:Degree;
   skos:broader vars:AtmosphericTerms;
   skos:inScheme <http://purl.org/m4m-dk-2/variables/>;
   skos:prefLabel "wind_direction"@en .
+
+vars:Latitude a skos:Concept;
+  skos:broader vars:GenericTerms;
+  skos:closeMatch <https://mmisw.org/ont/cf/parameter/grid_latitude>, <https://mmisw.org/ont/cf/parameter/latitude>;
+  skos:definition "Latitude is positive northward; its units of degree_north (or equivalent) indicate this explicitly. In a latitude-longitude system defined with respect to a rotated North Pole, the standard name of grid_latitude should be used instead of latitude. Grid latitude is positive in the grid-northward direction, but its units should be plain degree."@en;
+  skos:inScheme <http://purl.org/m4m-dk-2/variables/>;
+  skos:prefLabel "Latitude"@en .
+
+vars:Longitude a skos:Concept;
+  skos:broader vars:GenericTerms;
+  skos:closeMatch <https://mmisw.org/ont/cf/parameter/grid_longitude>, <https://mmisw.org/ont/cf/parameter/longitude>;
+  skos:definition "Longitude is positive eastward; its units of degree_east (or equivalent) indicate this explicitly. In a latitude-longitude system defined with respect to a rotated North Pole, the standard name of grid_longitude should be used instead of longitude. Grid longitude is positive in the grid-eastward direction, but its units should be plain degree."@en;
+  skos:inScheme <http://purl.org/m4m-dk-2/variables/>;
+  skos:prefLabel "Longitude"@en .
+
+vars:relative_humidity a skos:Concept;
+  skos:inScheme <http://purl.org/m4m-dk-2/variables/>;
+  skos:prefLabel "relative_humidity"@en;
+  skos:topConceptOf <http://purl.org/m4m-dk-2/variables/> .
+
+vars:atmospheric_pressure a skos:Concept;
+  qudt:unit unit:HectoPA, unit:MilliBAR;
+  skos:broader vars:AtmosphericTerms;
+  skos:closeMatch <https://mmisw.org/ont/cf/parameter/air_pressure>;
+  skos:definition "Air pressure is the force per unit area which would be exerted when the moving gas molecules of which the air is composed strike a theoretical surface of any orientation."@en;
+  skos:inScheme <http://purl.org/m4m-dk-2/variables/>;
+  skos:prefLabel "atmospheric_pressure"@en .
+
+vars:water_temperature a skos:Concept;
+  skos:broader vars:AtmosphericTerms;
+  skos:inScheme <http://purl.org/m4m-dk-2/variables/>;
+  skos:prefLabel "water_temperature"@en .
+
+vars:Propiconazole a skos:Concept;
+  skos:altLabel "1-[[2-(2"@en, "2"@en, "3-dioxolan-2-yl]methyl]-1"@en, "4-dichlorophenyl)-4-propyl-1"@en,
+    "4-triazole"@en, "60207-90-1"@en;
+  skos:broader vars:GenericTerms;
+  skos:exactMatch <https://pubchem.ncbi.nlm.nih.gov/compound/43234>;
+  skos:inScheme <http://purl.org/m4m-dk-2/variables/>;
+  skos:prefLabel "Propiconazole"@en .
