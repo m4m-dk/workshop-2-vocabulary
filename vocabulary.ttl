@@ -11,19 +11,19 @@
     <https://orcid.org/0000-0002-9823-589X>, <https://orcid.org/0000-0003-2971-3402>;
   dct:description "Quantitative and qualitative and quantitative variables describing ..."@en;
   dct:rights <https://spdx.org/licenses/CC0-1.0>;
-  dct:title "Wastewater-2 Variables"@en;
-  pav:createdOn "2021-08-23T18:13+02:00"@en;
-  pav:lastUpdatedOn "2021-08-24T09:33+02:00"@en;
+  dct:title "ENVS variables"@en;
+  pav:createdOn "2021-09-27T12:00+02:00"@en;
+  pav:lastUpdatedOn "2021-09-27T12:00+02:00"@en;
   pav:version "0.1.1"@en;
   skos:hasTopConcept <http://purl.org/m4m-dk-2/variables/>, vars:AtmosphericTerms, vars:GenericTerms,
-    vars:WaterTerms, vars:relative_humidity;
+    vars:WaterTerms;
   skos:inScheme <http://purl.org/m4m-dk-2/variables/>;
   skos:topConceptOf <http://purl.org/m4m-dk-2/variables/> .
 
 vars:AtmosphericTerms a skos:Concept;
   skos:definition "This is a parent concept containing controlled terms representing atmospheric variables."@en;
   skos:inScheme <http://purl.org/m4m-dk-2/variables/>;
-  skos:narrower vars:atmospheric_pressure, vars:water_temperature, vars:wind_direction,
+  skos:narrower vars:atmospheric_pressure, vars:relative_humidity, vars:wind_direction,
     vars:wind_speed;
   skos:prefLabel "Atmospheric Terms"@en;
   skos:topConceptOf <http://purl.org/m4m-dk-2/variables/> .
@@ -31,6 +31,7 @@ vars:AtmosphericTerms a skos:Concept;
 vars:WaterTerms a skos:Concept;
   skos:definition "This is a parent concept containing controlled terms representing water variables."@en;
   skos:inScheme <http://purl.org/m4m-dk-2/variables/>;
+  skos:narrower vars:water_temperature;
   skos:prefLabel "Water Terms"@en;
   skos:topConceptOf <http://purl.org/m4m-dk-2/variables/> .
 
@@ -71,9 +72,9 @@ vars:Longitude a skos:Concept;
   skos:prefLabel "Longitude"@en .
 
 vars:relative_humidity a skos:Concept;
+  skos:broader vars:AtmosphericTerms;
   skos:inScheme <http://purl.org/m4m-dk-2/variables/>;
-  skos:prefLabel "relative_humidity"@en;
-  skos:topConceptOf <http://purl.org/m4m-dk-2/variables/> .
+  skos:prefLabel "relative_humidity"@en .
 
 vars:atmospheric_pressure a skos:Concept;
   qudt:unit unit:HectoPA, unit:MilliBAR;
@@ -84,7 +85,7 @@ vars:atmospheric_pressure a skos:Concept;
   skos:prefLabel "atmospheric_pressure"@en .
 
 vars:water_temperature a skos:Concept;
-  skos:broader vars:AtmosphericTerms;
+  skos:broader vars:WaterTerms;
   skos:inScheme <http://purl.org/m4m-dk-2/variables/>;
   skos:prefLabel "water_temperature"@en .
 
