@@ -13,8 +13,8 @@
   dct:rights <https://spdx.org/licenses/CC0-1.0>;
   dct:title "ENVS variables"@en;
   pav:createdOn "2021-09-27T12:00+02:00"@en;
-  pav:lastUpdatedOn "2021-09-27T12:00+02:00"@en;
-  pav:version "0.1.1"@en;
+  pav:lastUpdatedOn "2021-09-27T13:00+02:00"@en;
+  pav:version "0.1.2"@en;
   skos:hasTopConcept <http://purl.org/m4m-dk-2/variables/>, vars:AtmosphericTerms, vars:GenericTerms,
     vars:WaterTerms;
   skos:inScheme <http://purl.org/m4m-dk-2/variables/>;
@@ -90,8 +90,8 @@ vars:water_temperature a skos:Concept;
   skos:prefLabel "water_temperature"@en .
 
 vars:Propiconazole a skos:Concept;
-  skos:altLabel "1-[[2-(2"@en, "2"@en, "3-dioxolan-2-yl]methyl]-1"@en, "4-dichlorophenyl)-4-propyl-1"@en,
-    "4-triazole"@en, "60207-90-1"@en;
+  skos:altLabel "1-[[2-(2,4-dichlorophenyl)-4-propyl-1,3-dioxolan-2-yl]methyl]-1,2,4-triazole"@en,
+    "60207-90-1"@en;
   skos:broader vars:GenericTerms;
   skos:exactMatch <https://pubchem.ncbi.nlm.nih.gov/compound/43234>;
   skos:inScheme <http://purl.org/m4m-dk-2/variables/>;
