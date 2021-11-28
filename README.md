@@ -3,7 +3,7 @@
 # [Artic Climate Variables](http://purl.org/m4m-dk-2/variables/)
 Controlled vocabularies allow an accurate and controlled approach in describing physical and digital assets (e.g., data). One of such controlled vocabulary is **Artic Climate Variables**. This controlled vocabulary is a result of the second Danish Metadata 4 Machine (M4M-DK-2) Workshop. 
 
-`sheet2rdf` and `OntoStack`, developed by [FAIR Data Collective](https://dk.linkedin.com/company/fair-data-collective), are used to build and serve **Artic Climate Variables**, while [PURL](https://archive.org/services/purl/) is used to persist identifiers for the vocabulary terms and properties:
+`sheet2rdf` and `OntoStack`, developed by Nikola Vasiljevic, are used to build and serve **Artic Climate Variables**, while [PURL](https://archive.org/services/purl/) is used to persist identifiers for the vocabulary terms and properties:
 
    http://purl.org/m4m-dk-2/variables/
 
